@@ -85,7 +85,7 @@ public class U2F4 {
                     System.out.println("Ingresa el tiempo en segundos: ");
                     double segundos = read.nextDouble();
 
-                    //tranform sec into hours. 
+                    //tranform sec into hours.
                             // 1h = 3600 sec
                     double horas = segundos/SECONDS;
 
@@ -101,10 +101,9 @@ public class U2F4 {
                     System.out.println("Ingresa el valor 2");
                     double q = read.nextDouble();
 
-                    //operacion
-                    double operacion = Math.sqrt(p*3) + Math.sqrt(q*4) - 2 * Math.sqrt(p);
-
-                    //checker si operacion es menor que VALOR
+                    //operacion.
+                    double operacion = Math.pow(p, 3) + Math.pow(q, 4) - 2 * Math.pow(p, 2);
+                    //checker si operacion es menor que VALOR.
                     if (operacion < VALOR)
                     {
                         System.out.println("El valor "+operacion+" es menor que "+VALOR);
@@ -121,6 +120,10 @@ public class U2F4 {
             repeticion = read.nextInt();
         }
         while(repeticion == 1);
+        if (repeticion != 1) 
+        {
+            System.out.println("Adios");
+        }
         
     }
 }
